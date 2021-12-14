@@ -72,6 +72,11 @@ hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
 
+### 2.1 One-liner
+
+`sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+会自动更新hosts文件中的GitHub520部分（确保该部分在文件末尾）。可以添加进cron定时自动更新。
+
 ### 2.1 手动方式
 
 #### 2.1.1 修改 hosts 文件
